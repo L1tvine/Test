@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #fff; /* Изменение цвета текста на белый */
+    background-color: #4CAF50; /* Добавление серой полоски */
+    padding: 10px; /* Размер отступа вокруг текста */
+    border-radius: 10px; /* Закругление углов для полоски */
+}
+
+#avatar-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4CAF50; /* Зеленая рамка вокруг аватара */
+    animation: glowBorder 2s infinite alternate; /* Анимация моргания цветом */
+}
+
+@keyframes glowBorder {
+    from {
+        box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(76, 175, 80, 0.8), 0 0 30px rgba(76, 175, 80, 0.6);
+    }
+}
+
+#avatar-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#return-to-main-menu-btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: background-color 0.3s;
+}
+
+#return-to-main-menu-btn:hover {
+    background-color: #45a049;
+}
+
+#save-changes-btn {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#save-changes-btn:hover {
+    background-color: #45a049;
+}

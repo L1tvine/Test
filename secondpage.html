@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Opening Simulator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Case Opening Simulator</h1>
+    </header>
+
+    <main>
+        <div id="profile">
+            <img id="avatar" src="default-avatar.jpg" alt="Avatar">
+            <div>
+                <label for="nickname">Nickname:</label>
+                <input type="text" id="nickname" value="" readonly>
+            </div>
+        </div>
+
+        <div id="balance">
+            <h2>Balance: <span id="balance-amount">1000000</span> coins</h2>
+        </div>
+
+        <div id="case">
+            <h2>Case Cost: 70 coins</h2>
+            <button id="open-case-btn">Open Case</button>
+        </div>
+
+        <div id="result" style="display: none;">
+            <h2>Result:</h2>
+            <img id="item-img" src="" alt="Item Image">
+            <p id="item-rarity"></p>
+            <p id="item-cost"></p>
+        </div>
+
+        <div id="inventory">
+            <h2>Inventory:</h2>
+            <div id="inventory-items"></div>
+            <div id="total-value">Total Value: <span id="inventory-value">0</span> coins</div>
+            <button id="sell-all-btn">Sell All</button>
+        </div>
+
+        <!-- Гиперссылка для возвращения на первую страницу -->
+        <p><a href="index.html"><h2>Back to Menu</h2></a></p>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Load saved values from localStorage
+        const savedAvatar = localStorage.getItem('avatar');
+        const savedNickname = localStorage.getItem('nickname');
+
+        // Set values on the page
+        $("#avatar").attr("src", savedAvatar || 'default-avatar.jpg');
+        $("#nickname").val(savedNickname || '');
+    </script>
+</body>
+
+</html>
